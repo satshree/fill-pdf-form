@@ -1,5 +1,6 @@
 # CUSTOM
 ignore/
+data.json
 
 # macOS
 .DS_Store
