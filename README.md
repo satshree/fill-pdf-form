@@ -15,7 +15,7 @@ Fill PDF Forms with Python
 - Initialize with script `initialize.sh`
 
     ```
-    >> bash ./initialize.sh
+    >> bash initialize.sh
     ```
 
 - Run `main.py`
