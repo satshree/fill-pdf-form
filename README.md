@@ -50,7 +50,7 @@ Fill PDF Forms with Python
     field2 = data2
     ...
     ------------------------------------------------------------
-    Enter 'YES' to fill, 'NO' to edit data, 'STOP' to exit:
+    Enter 'YES' to fill, 'NO' to edit data, 'STOP' to exit: YES
     ------------------------------------------------------------
     PDF Form Filled. Check output at path/to/output/pdf^C
     ------------------------------------------------------------
