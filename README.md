@@ -58,3 +58,44 @@ Fill PDF Forms with Python
     ------------------------------------------------------------
     ```
  
+ ## Methods of `fill.Fill`
+
+- `initialize_pdf(initialize_keys=True)`
+    > Initilize the PDF file. Pass `initialize_keys` as `False` to not initialize the form field keys which this method does by default.
+- `initialize_keys()`
+    > Initialize the form field keys found in the PDF file.
+- `populate_data(data)`
+    > Populate the data with required key fields as `dict` type. Do this before filling up the form.
+- `fill_pdf_form()`
+    > Fill up the form with data populated by `populate_data(data)` method.
+
+### Example
+```python
+from fill import Fill
+
+# PDF FILES
+pdf_file = "path/to/pdf"
+output_file = "path/to/output"
+
+# CREATE OBJECT
+fill_pdf_form = Fill(pdf_file, output_file)
+
+# INITIALIZE PDF FILE, KEYS ARE INITIALIZED BY DEFAULT
+fill_pdf_form.initialize_pdf()
+
+# LIST OUT FIELD KEYS OF PDF FORM
+print(fill_pdf_form.KEYS)
+
+# POPULATE DATA TO FILL
+data = {
+    "field1": "data1",
+    "field2": "data2",
+}
+fill_pdf_form.populate_data(data)
+
+# FILL FORM
+fill_pdf_form.fill_pdf_form()
+
+# THE OUTPUT WILL BE AT output_file
+print("Output file location:", fill_pdf_form.output_file)
+```
