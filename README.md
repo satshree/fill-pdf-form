@@ -52,7 +52,7 @@ Fill PDF Forms with Python
     ------------------------------------------------------------
     Enter 'YES' to fill, 'NO' to edit data, 'STOP' to exit:
     ------------------------------------------------------------
-    PDF Form Filled. Check output at ignore/output.pdf^C
+    PDF Form Filled. Check output at path/to/output/pdf^C
     ------------------------------------------------------------
     Bye Bye.
     ------------------------------------------------------------
