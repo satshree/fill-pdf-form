@@ -5,7 +5,7 @@ if sys.version[0] != "3":
     sys.exit(1)
 
 import json
-from .fill import Fill
+from fill import Fill
 
 __author__ = "Satshree Shrestha"
 SEPARATOR = "-" * 60
@@ -38,6 +38,7 @@ if __name__ == "__main__":
             # POPULATE DATA AND FILL PDF FORM
             print(SEPARATOR)
             input("Press Enter to continue once you fill up 'data.json' file.")
+            print(SEPARATOR)
 
             # READ DATA
             try:
@@ -46,8 +47,8 @@ if __name__ == "__main__":
                 data_json.close()
             except FileNotFoundError:
                 print("Cannot find 'data.json' file.")
+                continue
 
-            print(SEPARATOR)
             print("The following is the data,")
             for key, value in data.items():
                 print(f"{key} = {value}")
@@ -73,6 +74,7 @@ if __name__ == "__main__":
                 print(SEPARATOR)
                 print("Skipped.")
     except KeyboardInterrupt:
+        print("")
         print(SEPARATOR)
         print("Bye Bye.")
         print(SEPARATOR)

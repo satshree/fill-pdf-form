@@ -7,6 +7,9 @@ try:
 except ModuleNotFoundError:
     print("Install 'pdfrw' package.")
 
+    import sys
+    sys.exit(1)
+
 __author__ = "Satshree Shrestha"
 
 
